@@ -1,0 +1,165 @@
+:root {
+    --cinza: #5D5E5B;
+    --branco: #FFFFFF;
+    --borda_1: #CCC2B5;
+    --borda_2: #838373;
+    --borda_3: #EDE5DC;
+    --azul: #749ed7;
+    --azul_texto: #3050C8;
+    --fundo_modal: #F8F8F8;
+    --borda_modal_1: #4870A0;
+    --borda_modal_2: #A0D0E0;
+}
+
+
+/* Importar Fontes */
+
+@font-face {
+    font-family: Pokemon;
+    src: url(../fontes/Pokemon\ Fire\ Red\ Regular.otf)
+}
+
+/* Define estilo para o fundo */
+
+body {
+    width: 100%;
+    background-image: url("../img/fundo/claro.jpg");
+    background-attachment: fixed;
+    transition: background-image 0.5s ease-in-out;
+}
+
+
+body.dark {
+    background-image: url("../img/fundo/escuro.jpg");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Animação logo */
+.header-login {
+    display: flex;
+}
+
+.header-login img {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveLogo 5s ease-in-out infinite;
+}
+
+@keyframes moveLogo {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%);
+    }
+
+    50% {
+        transform: translate(-50%, -60%);
+    }
+}
+
+/* Final Animação logo */
+
+/* Login */
+
+.card-login {
+    background-color: var(--branco);
+    border-radius: 20px;
+    box-shadow:
+        0 0 0 4px var(--borda_1),
+        0 0 0 6px var(--borda_2);
+    padding: 20px;
+    border: 4px solid var(--borda_3);
+    border-radius: 20px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-login h1 {
+    font-family: 'Pokemon';
+    text-align: center;
+    font-size: 50px;
+}
+
+.itens-login label {
+    font-family: "Pokemon";
+    text-shadow: 1px 1px 0px rgb(68, 68, 68);
+    font-size: 30px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.itens-login input {
+    font-family: "Pokemon";
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 50px;
+    border: 1px solid gray;
+    width: 300px;
+}
+
+.itens-login button {
+    display: grid;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 300px;
+    font-family: "Pokemon";
+    text-shadow: 1px 1px 0px rgb(68, 68, 68);
+    font-size: 35px;
+    background-color: var(--borda_3);
+    border-radius: 50px;
+    box-shadow:
+        0 0 0 4px var(--borda_1),
+        0 0 0 6px var(--borda_2);
+    border: 4px solid var(--borda_3);
+}
+
+.itens-login a {
+    display: flex;
+    position: relative;
+    padding-top: 7%;
+    font-family: "Pokemon";
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px rgb(68, 68, 68);
+    font-size: 27px;
+    justify-content: center;
+}
+
+.pokebola {
+    position: absolute;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+.esquerda {
+    background-image: url('../img/elementos/pokebola.png');
+    top: 11px;
+    left: -20px;
+}
+
+.direita {
+    background-image: url('../img/elementos/pokebola.png');
+    top: 11px;
+    right: -20px;
+    transform: scaleX(-1);
+}
+
+/* Final Login */
